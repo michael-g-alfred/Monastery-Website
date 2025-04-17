@@ -1,0 +1,466 @@
+@import url(CSS/Base.css);
+@import url(CSS/Variables.CSS);
+@import url(CSS/Navbar.css);
+@import url(CSS/Subbar.css);
+@import url(CSS/Hero.css);
+
+/* ------------------------------------- Verse SECTION ------------------------------------- */
+.versebar-Date-container {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-areas: "ar-date verse cop-date";
+  /* align-items: center; */
+  /* justify-items: center; */
+  border-bottom: var(--Sizes-2px) solid var(--Secondary-color-Pressed);
+  padding: 0 var(--Sizes-12px);
+  gap: var(--Sizes-12px);
+}
+
+.versebar {
+  grid-area: verse;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--Sizes-12px);
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: var(--Sizes-2px) solid var(--Primary-color-Rest);
+  border-left: var(--Sizes-2px) solid var(--Primary-color-Rest);
+  border-radius: var(--border-radius-12px);
+}
+
+.versebar span {
+  color: var(--Primary-color-Rest);
+  font-size: var(--Fonts-H6);
+  font-weight: bold;
+  white-space: nowrap;
+  animation: scroll-left 25s linear infinite;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* ------------------------------------- DATE STYLE ------------------------------------- */
+
+#ArabicDate,
+#CopticDate {
+  display: flex;
+  align-items: center;
+  font-size: var(--Fonts-H6);
+  font-weight: bold;
+  color: var(--Primary-color-Rest);
+  justify-content: center;
+}
+
+/* ------------------------------------- CONTENT SECTION ------------------------------------- */
+#content {
+  margin-top: var(--Sizes-10px);
+  display: grid;
+  grid-template-rows: repeat(12, auto);
+  gap: var(--Sizes-12px);
+  grid-template-areas:
+    "title01"
+    "content01"
+    "title02"
+    "content02"
+    "title03"
+    "content03"
+    "title04"
+    "content04"
+    "title05"
+    "content05"
+    "title06"
+    "content06";
+}
+
+#title01,
+#title02,
+#title03,
+#title04,
+#title05,
+#title06 {
+  width: 99%;
+  background-color: var(--Primary-color-Rest);
+  border-radius: var(--border-radius-12px) 0 0 var(--border-radius-8px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--Sizes-12px) var(--Sizes-40px) var(--Sizes-12px)
+    var(--Sizes-12px);
+}
+
+#title01 svg,
+#title02 svg,
+#title03 svg,
+#title04 svg,
+#title05 svg,
+#title06 svg {
+  width: var(--Sizes-40px);
+  height: var(--Sizes-40px);
+  stroke: var(--White-color);
+}
+
+#title01 button,
+#title02 button,
+#title03 button,
+#title04 button,
+#title05 button,
+#title06 button {
+  font-family: "Noto Sans Arabic", serif;
+  font-size: var(--Fonts-H5);
+  font-weight: semibold;
+  color: var(--White-color);
+}
+
+/* ------------------------------------- CONTENT BLOCKS ------------------------------------- */
+#content01,
+#content02,
+#content04,
+#content05 {
+  border: 0.1rem solid rgba(255, 255, 255, 0.3);
+  border-radius: var(--border-radius-12px);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.3), 1px -1px 2px 0 rgba(0, 0, 0, 0.3);
+  width: 95%;
+  justify-self: center;
+}
+
+#content02,
+#content04,
+#content05 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: space-around;
+  align-content: center;
+  gap: var(--Sizes-12px);
+  padding: var(--Sizes-12px);
+}
+
+/* ------------------------------------- Carousel ------------------------------------- */
+.carouselContainer {
+  position: relative;
+  height: var(--Sizes-640px);
+  display: grid;
+  grid-template-rows: 90% 10%;
+  grid-template-areas:
+    "Items"
+    "Dots";
+  padding-top: var(--Sizes-12px);
+  padding-bottom: var(--Sizes-12px);
+  border-radius: var(--border-radius-12px);
+  overflow: hidden;
+  /* background-color: var(--Primary-color-Pressed); */
+}
+
+.carouselItems {
+  width: 100%;
+  grid-area: Items;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--Sizes-12px);
+}
+
+.carouselItem {
+  height: 100%;
+  position: relative;
+  transition: all 0.6s ease-in-out;
+}
+
+.carouselItem.left,
+.carouselItem.right {
+  width: 20%;
+  height: 95%;
+  opacity: 0.3;
+}
+
+.carouselItem.left {
+  border-radius: var(--border-radius-12px) 0 0 var(--border-radius-12px);
+}
+
+.carouselItem.right {
+  border-radius: 0 var(--border-radius-12px) var(--border-radius-12px) 0;
+}
+
+.carouselItem.center {
+  width: 60%;
+  border-radius: var(--border-radius-12px);
+}
+
+.carouselImages {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+}
+
+.carouselTitle {
+  left: 0;
+  right: 0;
+  width: auto;
+  height: auto;
+  position: absolute;
+  bottom: 7%;
+  background-color: var(--Primary-color-Rest);
+  border: var(--Sizes-2px) solid var(--Primary-color-Pressed);
+  font-size: var(--Sizes-16px);
+  font-weight: bold;
+  text-align: right;
+  padding: var(--Sizes-12px);
+  color: var(--White-color);
+}
+.carouselItem.center img {
+  border: var(--Sizes-2px) solid var(--Primary-color-Pressed);
+}
+
+.carouselDots {
+  width: 100%;
+  height: 100%;
+  grid-area: Dots;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--Sizes-12px);
+}
+
+.carouselDot {
+  width: var(--Sizes-16px);
+  height: var(--Sizes-16px);
+  border-radius: 50%;
+  background-color: var(--Secondary-color-Rest);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.carouselDot:hover {
+  transform: scale(1.2);
+}
+
+.carouselActive {
+  background-color: var(--Primary-color-Rest);
+}
+
+.carouselItem.center h2 {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ------------------------------------- newsCard ------------------------------------- */
+.newsCard {
+  height: var(--Sizes-320px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--Sizes-4px);
+  gap: var(--Sizes-4px);
+  border-radius: var(--border-radius-8px);
+  box-sizing: border-box;
+  overflow: hidden;
+  word-wrap: break-word;
+  transition: transform 0.3s ease;
+}
+
+.newsCard:hover {
+  transform: scale(1.02);
+}
+
+.newsCard div {
+  width: 100%;
+  height: 30%;
+  max-height: 30%;
+  padding: var(--Sizes-8px);
+  border-radius: var(--border-radius-8px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-self: flex-start;
+  text-align: justify;
+  border: var(--Sizes-2px) solid var(--Primary-color-Rest);
+  overflow: auto;
+  white-space: normal;
+  word-spacing: normal;
+
+  word-wrap: break-word;
+}
+
+.newsCard img {
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+  border-radius: var(--border-radius-8px);
+  border: var(--Sizes-2px) solid var(--Primary-color-Rest);
+}
+
+.newsCard div h2 {
+  color: var(--Primary-color-Rest);
+  text-align: center;
+}
+
+.newsCard h3 {
+  max-width: 100%;
+  max-height: max-content;
+  color: var(--Primary-color-Pressed);
+  vertical-align: sub;
+  line-height: 1.3em;
+  word-spacing: normal;
+  white-space: normal;
+  text-overflow: ellipsis;
+}
+
+/* ------------------------------------- productsCard ------------------------------------- */
+.productsCardContainer {
+  height: var(--Sizes-160px);
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  justify-content: space-between;
+  padding: var(--Sizes-12px);
+  gap: var(--Sizes-12px);
+  border-radius: var(--border-radius-12px);
+  border: var(--Sizes-2px) solid var(--Primary-color-Rest);
+  transition: transform 0.3s ease;
+}
+
+.productsCardContainer:hover {
+  transform: scale(1.02);
+}
+
+.productsCardRight {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.product-name {
+  color: var(--Primary-color-Rest);
+  font-size: var(--Fonts-sub1);
+  font-weight: bold;
+}
+.product-price {
+  color: var(--Primary-color-Pressed);
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.productsCardLeft {
+  border-radius: var(--border-radius-12px);
+  overflow: hidden;
+}
+
+.productsCardLeft img {
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ------------------------------------- ALBUM CARDS ------------------------------------- */
+
+.albumCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--Sizes-12px);
+  gap: var(--Sizes-12px);
+  border-radius: var(--border-radius-12px);
+  border-top: var(--Sizes-2px) solid var(--Primary-color-Rest);
+  border-bottom: var(--Sizes-2px) solid var(--Primary-color-Rest);
+  transition: transform 0.3s ease;
+}
+.albumCard:hover {
+  transform: scale(1.02);
+}
+.albumDetails {
+  text-align: center;
+}
+.albumDetails h2 {
+  color: var(--Primary-color-Rest);
+  font-size: var(--Fonts-sub1);
+  font-weight: bold;
+}
+.albumDetails p {
+  font-size: 1.2em;
+  color: var(--Primary-color-Pressed);
+  font-weight: bold;
+}
+.imageGallery {
+  position: relative;
+  width: var(--Sizes-240px);
+  height: var(--Sizes-240px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--Sizes-12px);
+}
+
+.imageGallery_Item {
+  position: absolute;
+  border-radius: var(--border-radius-12px);
+}
+.imageGallery_Item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--border-radius-12px);
+}
+
+/* ------------------------------------- RESPONSIVE DESIGN ------------------------------------- */
+@media (max-width: 1024px) {
+  #content02,
+  #content04,
+  #content05 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  #content02,
+  #content04,
+  #content05 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .carouselContainer {
+    height: var(--Sizes-320px);
+  }
+  .imageGallery {
+    position: relative;
+  }
+}
+
+@media (max-width: 480px) {
+  #content02,
+  #content04,
+  #content05 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .versebar-Date-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  #ArabicDate,
+  #CopticDate {
+    font-size: var(--Fonts-Footer);
+  }
+  #ArabicDate {
+    justify-self: flex-start;
+  }
+  #CopticDate {
+    justify-self: flex-end;
+  }
+}
+
+@media (max-width: 900px) and (orientation: portrait) {
+  .versebar-Date-container {
+    grid-template-columns: 1fr 1.5fr 1fr;
+  }
+  .versebar span {
+    font-size: var(--Fonts-sub1);
+  }
+  #ArabicDate,
+  #CopticDate {
+    font-size: var(--Fonts-sub1);
+  }
+}

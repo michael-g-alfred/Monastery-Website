@@ -1,0 +1,110 @@
+:root {
+  --Fonts-H1: 7.9rem;
+  --Fonts-H2: 4.9rem;
+  --Fonts-H3: 3.9rem;
+  --Fonts-H4: 2.8rem;
+  --Fonts-H5: 2rem;
+  --Fonts-H6: 1.6rem;
+  --Fonts-sub1: 1.3rem;
+  --Fonts-sub2: 1.1rem;
+  --Fonts-P3: 1.8rem;
+  --Fonts-P2: 1.6rem;
+  --Fonts-P1: 1.4rem;
+  --Fonts-Caption: 1.2rem;
+  --Fonts-Footer: 1rem;
+
+  --Sizes-2px: 0.2rem;
+  --Sizes-4px: 0.4rem;
+  --Sizes-6px: 0.6rem;
+  --Sizes-8px: 0.8rem;
+  --Sizes-10px: 1rem;
+  --Sizes-12px: 1.2rem;
+  --Sizes-14px: 1.4rem;
+  --Sizes-16px: 1.6rem;
+  --Sizes-20px: 2rem;
+  --Sizes-24px: 2.4rem;
+  --Sizes-28px: 2.8rem;
+  --Sizes-32px: 3.2rem;
+  --Sizes-36px: 3.6rem;
+  --Sizes-40px: 4rem;
+  --Sizes-44px: 4.4rem;
+  --Sizes-48px: 4.8rem;
+  --Sizes-52px: 5.2rem;
+  --Sizes-56px: 5.6rem;
+  --Sizes-60px: 6rem;
+  --Sizes-64px: 6.4rem;
+  --Sizes-72px: 7.2rem;
+  --Sizes-80px: 8rem;
+  --Sizes-96px: 9.6rem;
+  --Sizes-100px: 10rem;
+  --Sizes-120px: 12rem;
+  --Sizes-128px: 12.8rem;
+  --Sizes-144px: 14.4rem;
+  --Sizes-160px: 16rem;
+  --Sizes-180px: 18rem;
+  --Sizes-198px: 19.8rem;
+  --Sizes-240px: 24rem;
+  --Sizes-280px: 28rem;
+  --Sizes-320px: 32rem;
+  --Sizes-400px: 40rem;
+  --Sizes-569px: 56.9rem;
+  --Sizes-640px: 64rem;
+  --nav-height: 6.4rem;
+  --hero-height-l: 52rem;
+  --hero-height-m: 48rem;
+  --hero-height-s: 32rem;
+  --border-radius-2px: 0.2rem;
+  --border-radius-4px: 0.4rem;
+  --border-radius-8px: 0.8rem;
+  --border-radius-12px: 1.2rem;
+  --border-radius-16px: 1.6rem;
+  --border-radius-24px: 2.4rem;
+  --border-radius-32px: 3.2rem;
+  --box-shadow: var(--Sizes-2px) var(--Sizes-2px) var(--Sizes-8px)
+    var(--Neutral-color-500);
+  --card-width: var(--Sizes-240px);
+  --card-height: var(--Sizes-320px);
+
+  --Neutral-color-50: #f8fafc;
+  --Neutral-color-50-90: rgba(247, 250, 252, 90%);
+  --Neutral-color-100: #f1f5f9;
+  --Neutral-color-200: #e2e8f0;
+  --Neutral-color-300: #cbd5e1;
+  --Neutral-color-300-90: rgba(204, 213, 224, 90%);
+  --Neutral-color-400: #94a3b8;
+  --Neutral-color-400-90: rgba(148, 163, 184, 90%);
+  --Neutral-color-500: #10161e;
+  --Neutral-color-500-90: rgba(16, 22, 30, 90%);
+  --Neutral-color-600: #475569;
+  --Neutral-color-700: #334155;
+  --Neutral-color-700-90: rgba(51, 65, 85, 90%);
+  --Neutral-color-800: #1e293b;
+  --Neutral-color-900: #0f172a;
+  --Neutral-color-900-90: rgba(15, 23, 42, 90%);
+
+  --Primary-color-Rest: #c9a227;
+  --Primary-color-Rest-25: rgba(201, 162, 39, 25%);
+  --Primary-color-Rest-30: rgba(201, 162, 39, 30%);
+  --Primary-color-Selected: #cda63d;
+  --Primary-color-Pressed: #76520e;
+
+  --Secondary-color-Rest: #e0e0e0;
+  --Secondary-color-Selected: #bdbdbd;
+  --Secondary-color-Selected-25: rgba(189, 189, 189, 25%);
+  --Secondary-color-Pressed: #757575;
+
+  --Success-color-light: #f1faf1;
+  --Success-color-Normal: #107c10;
+  --Success-color-Dark: #052505;
+
+  --Warning-color-light: #fff9f5;
+  --Warning-color-Normal: #f7630c;
+  --Warning-color-Dark: #bc4b09;
+
+  --Error-color-light: #fdf3f4;
+  --Error-color-Normal: #c50f1f;
+  --Error-color-Dark: #960b18;
+
+  --White-color: #ffffff;
+  --Black-color: #000000;
+}

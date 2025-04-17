@@ -1,0 +1,74 @@
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: var(--Sizes-400px);
+  display: grid;
+  grid-template-rows: 1fr;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  padding: var(--Sizes-12px);
+  gap: var(--Sizes-12px);
+  background-image: url("../Assets/Images/Monastery.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  z-index: 0;
+}
+.hero-overlay {
+  position: absolute;
+  width: calc(100% - var(--Sizes-16px));
+  height: calc(100% - var(--Sizes-16px));
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: var(--border-radius-12px);
+  background-color: var(--Secondary-color-Selected-25);
+  z-index: -1;
+}
+.hero-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: var(--Sizes-12px);
+  gap: var(--Sizes-12px);
+}
+
+.hero h1 {
+  color: var(--Primary-color-Rest);
+  font-size: var(--Fonts-H3);
+  text-shadow: 1px 1px 0px var(--Primary-color-Pressed),
+    1px 1px 2px var(--Black-color);
+}
+
+/* .hero p {
+  color: var(--Primary-color-Pressed);
+  font-size: var(--Fonts-H3);
+} */
+
+/* === Tablet Adjustments === */
+@media (max-width: 992px) {
+}
+
+/* === Mobile Adjustments === */
+@media (max-width: 768px) {
+  .hero {
+    min-height: var(--Sizes-320px);
+  }
+  .hero h1 {
+    font-size: var(--Fonts-H4);
+  }
+
+  .hero p {
+    font-size: var(--Fonts-sub2);
+  }
+}
+
+/* === Small Mobile Adjustments === */
+@media (max-width: 480px) {
+}

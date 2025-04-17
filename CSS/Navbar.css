@@ -1,0 +1,74 @@
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--Sizes-12px);
+  padding: var(--Sizes-8px);
+  background-color: var(--Primary-color-Rest-25);
+}
+
+.nav-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--Sizes-8px);
+  flex-wrap: wrap; /* Allows items to wrap if needed but never collapses into 1 column */
+}
+
+/* Buttons */
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--Sizes-8px);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: transform 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.15);
+}
+
+button img {
+  width: var(--Sizes-36px);
+  height: var(--Sizes-36px);
+}
+
+/* Extra Large Screens (Desktops, Large Monitors) */
+@media (min-width: 1200px) {
+  nav {
+    gap: var(--Sizes-8px);
+  }
+}
+
+/* Large Screens (Laptops, Tablets in Landscape) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  nav {
+    gap: var(--Sizes-8px);
+  }
+}
+
+/* Medium Screens (Tablets, Small Laptops) */
+@media (min-width: 768px) and (max-width: 991px) {
+  nav {
+    gap: var(--Sizes-8px);
+  }
+}
+
+/* Small Screens (Mobile Phones) */
+@media (max-width: 767px) {
+  nav {
+    gap: var(--Sizes-4px);
+  }
+}
+
+/* Extra Small Screens (Very Small Phones) */
+@media (max-width: 480px) {
+  nav {
+    gap: var(--Sizes-2px);
+  }
+}
